@@ -1,5 +1,7 @@
 # Binance Futures Testnet Trading Bot
 
+**[NOTICE]: This project was built 100% using AI (OpenClaw + Gemini 1.5 Pro).**
+
 A robust Python CLI application to place orders on the Binance Futures Testnet (USDT-M) using direct REST API calls and HMAC-SHA256 signing.
 
 ## Features
