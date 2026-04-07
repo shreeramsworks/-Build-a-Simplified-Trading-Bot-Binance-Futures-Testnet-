@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfyNode | Automate. Scale. Dominate.</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B132B',
+                        secondary: '#1C2541',
+                        accent: '#3A506B',
+                        highlight: '#5BC0BE',
+                        light: '#FFFFFF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B132B;
+            color: #FFFFFF;
+        }
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+<body class="bg-primary text-light font-sans antialiased overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-primary/90 backdrop-blur-md border-b border-accent/30 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img class="h-12 w-auto rounded" src="logo.png" alt="InfyNode Logo">
+                    <span class="ml-3 text-2xl font-bold tracking-wider text-white">INFYNODE</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-highlight transition-colors px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-highlight transition-colors px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#services" class="text-gray-300 hover:text-highlight transition-colors px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-highlight transition-colors px-3 py-2 text-sm font-medium">Portfolio</a>
+                    <a href="#contact" class="bg-highlight text-primary hover:bg-highlight/90 transition-colors px-4 py-2 rounded-md text-sm font-bold">Get in Touch</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary border-b border-accent/30 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-link block text-gray-300 hover:text-highlight hover:bg-accent/20 px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="mobile-link block text-gray-300 hover:text-highlight hover:bg-accent/20 px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#services" class="mobile-link block text-gray-300 hover:text-highlight hover:bg-accent/20 px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#portfolio" class="mobile-link block text-gray-300 hover:text-highlight hover:bg-accent/20 px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#contact" class="mobile-link block text-highlight font-bold hover:bg-accent/20 px-3 py-2 rounded-md text-base">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-highlight/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+                <div class="absolute top-40 right-10 w-72 h-72 bg-accent/30 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+                <div class="absolute -bottom-8 left-40 w-72 h-72 bg-highlight/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                        <span class="block">Welcome to</span>
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-highlight to-blue-400 mt-2">INFYNODE</span>
+                    </h1>
+                    <p class="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                        Automate. Scale. Dominate.
+                    </p>
+                    <p class="mt-4 max-w-2xl mx-auto text-sm text-gray-400 sm:text-base">
+                        We provide cutting-edge business solutions and automations powered by Artificial Intelligence to help your company thrive in the digital age.
+                    </p>
+                    <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+                        <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                            <a href="#services" class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-highlight hover:bg-highlight/90 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-highlight/30 w-full">
+                                Explore Solutions
+                            </a>
+                            <a href="#contact" class="flex items-center justify-center px-8 py-3 border border-highlight text-base font-medium rounded-md text-highlight bg-transparent hover:bg-highlight/10 transition-all duration-300 w-full">
+                                Free Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-secondary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                    <div class="mb-10 lg:mb-0 transform transition-all hover:scale-105 duration-500">
+                        <img src="logo.png" alt="InfyNode AI Technology" class="rounded-2xl shadow-2xl shadow-highlight/20 w-3/4 mx-auto lg:w-full object-cover">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
+                            Pioneering the Future with <span class="text-highlight">AI</span>
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-300">
+                            At InfyNode, we don't just follow trends; we set them. Our mission is to empower businesses by integrating intelligent automations that streamline operations, reduce costs, and accelerate growth.
+                        </p>
+                        <div class="mt-8 space-y-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-highlight text-primary">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl leading-6 font-bold text-white">Rapid Automation</h3>
+                                    <p class="mt-2 text-base text-gray-400">Deploy custom AI agents that handle repetitive tasks in fractions of a second.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-highlight text-primary">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl leading-6 font-bold text-white">Secure & Scalable</h3>
+                                    <p class="mt-2 text-base text-gray-400">Enterprise-grade security built into scalable architectures that grow with you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base text-highlight font-semibold tracking-wide uppercase">Capabilities</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Intelligent Business Solutions
+                    </p>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
+                        Transforming data into decisions and operations into automated workflows.
+                    </p>
+                </div>
+
+                <div class="mt-16">
+                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- Service 1 -->
+                        <div class="pt-6">
+                            <div class="flow-root bg-secondary rounded-lg px-6 pb-8 transform transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-highlight/20 border border-accent/20 h-full">
+                                <div class="-mt-6">
+                                    <div>
+                                        <span class="inline-flex items-center justify-center p-3 bg-highlight rounded-md shadow-lg">
+                                            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <h3 class="mt-8 text-lg font-medium text-white tracking-tight">AI Workflow Automation</h3>
+                                    <p class="mt-5 text-base text-gray-400">
+                                        End-to-end automation of complex business processes using LLMs and custom scripting, saving thousands of manual hours.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div class="pt-6">
+                            <div class="flow-root bg-secondary rounded-lg px-6 pb-8 transform transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-highlight/20 border border-accent/20 h-full">
+                                <div class="-mt-6">
+                                    <div>
+                                        <span class="inline-flex items-center justify-center p-3 bg-highlight rounded-md shadow-lg">
+                                            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <h3 class="mt-8 text-lg font-medium text-white tracking-tight">Predictive Analytics</h3>
+                                    <p class="mt-5 text-base text-gray-400">
+                                        Leverage machine learning models to forecast trends, understand customer behavior, and make data-driven strategic decisions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="pt-6">
+                            <div class="flow-root bg-secondary rounded-lg px-6 pb-8 transform transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-highlight/20 border border-accent/20 h-full">
+                                <div class="-mt-6">
+                                    <div>
+                                        <span class="inline-flex items-center justify-center p-3 bg-highlight rounded-md shadow-lg">
+                                            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <h3 class="mt-8 text-lg font-medium text-white tracking-tight">Conversational AI</h3>
+                                    <p class="mt-5 text-base text-gray-400">
+                                        Deploy intelligent chatbots and virtual assistants that provide 24/7 customer support and lead generation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-secondary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Featured Projects
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
+                        See how we've transformed businesses with our AI solutions.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+                    <!-- Project 1 -->
+                    <div class="group relative bg-primary rounded-xl overflow-hidden border border-accent/20 hover:border-highlight/50 transition-colors duration-300">
+                        <div class="relative h-64 w-full bg-accent/30 overflow-hidden flex items-center justify-center">
+                            <!-- Placeholder image/icon for project -->
+                            <svg class="h-20 w-20 text-highlight/50 group-hover:scale-110 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">E-Commerce Revenue Optimizer</h3>
+                            <p class="text-gray-400 mb-4">An AI-driven pricing and recommendation engine that increased client sales by 35% within the first quarter.</p>
+                            <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-highlight/10 text-highlight">
+                                Machine Learning
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group relative bg-primary rounded-xl overflow-hidden border border-accent/20 hover:border-highlight/50 transition-colors duration-300">
+                        <div class="relative h-64 w-full bg-accent/30 overflow-hidden flex items-center justify-center">
+                            <!-- Placeholder image/icon for project -->
+                            <svg class="h-20 w-20 text-highlight/50 group-hover:scale-110 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Automated HR Agent</h3>
+                            <p class="text-gray-400 mb-4">A custom LLM integration for an enterprise client to automate resume screening and initial candidate interviews.</p>
+                            <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-highlight/10 text-highlight">
+                                Generative AI
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-secondary rounded-2xl shadow-xl overflow-hidden border border-accent/20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <!-- Contact Info -->
+                        <div class="bg-secondary p-10 lg:p-12">
+                            <h3 class="text-3xl font-extrabold text-white">Let's talk about your project</h3>
+                            <p class="mt-4 text-lg text-gray-400">
+                                Ready to automate and scale? Reach out to us for a free consultation on how AI can transform your business operations.
+                            </p>
+                            <div class="mt-8 space-y-6">
+                                <div class="flex items-center">
+                                    <svg class="h-6 w-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    <span class="ml-4 text-gray-300">hello@infynode.com</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="h-6 w-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                    <span class="ml-4 text-gray-300">+1 (555) 123-4567</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="h-6 w-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                    <span class="ml-4 text-gray-300">Global Remote Team</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="bg-primary p-10 lg:p-12">
+                            <form action="#" method="POST" class="space-y-6">
+                                <div>
+                                    <label for="name" class="sr-only">Full name</label>
+                                    <input type="text" name="name" id="name" autocomplete="name" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-highlight focus:border-highlight border-accent/30 rounded-md bg-secondary text-white" placeholder="Full name">
+                                </div>
+                                <div>
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input id="email" name="email" type="email" autocomplete="email" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-highlight focus:border-highlight border-accent/30 rounded-md bg-secondary text-white" placeholder="Email">
+                                </div>
+                                <div>
+                                    <label for="message" class="sr-only">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-highlight focus:border-highlight border-accent/30 rounded-md bg-secondary text-white" placeholder="Message"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-primary bg-highlight hover:bg-highlight/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-highlight focus:ring-offset-primary w-full transition-colors">
+                                        Submit Request
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary border-t border-accent/30 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex justify-center md:justify-start items-center space-x-3">
+                    <img class="h-8 w-auto rounded" src="logo.png" alt="InfyNode">
+                    <span class="text-xl font-bold tracking-wider text-white">INFYNODE</span>
+                </div>
+                <div class="mt-8 md:mt-0">
+                    <p class="text-center md:text-left text-base text-gray-400">
+                        &copy; 2024 InfyNode. All rights reserved.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-4 border-t border-accent/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-500 text-center md:text-left">
+                    Automate. Scale. Dominate.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-highlight">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-highlight">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
